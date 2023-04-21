@@ -18,6 +18,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+from sklearn.cluster import KMeans
+from sklearn.metrics import silhouette_score
+
 # Create a directory to save the figures
 if not os.path.exists('figures'):
     os.mkdir('figures')
@@ -25,6 +28,7 @@ if not os.path.exists('figures'):
 # Load the dataset
 df = pd.read_csv('garments_worker_productivity.csv')  # Replace 'your_dataset.csv' with the actual filename or path of your dataset
 
+# def preprocess_data(df):
 # 1.1 Identify the outliers in the dataset
 # Plot boxplots for numerical features to identify outliers
 numerical_features = df.select_dtypes(include='number').columns
@@ -65,3 +69,5 @@ for feature in categorical_features:
     plt.ylabel('Count')
     plt.savefig(f'figures/countplot_{feature}.png')
     plt.close()
+
+# preprocess_data(df)
