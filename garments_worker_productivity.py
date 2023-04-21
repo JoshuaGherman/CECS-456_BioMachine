@@ -38,3 +38,10 @@ sns.pairplot(df, diag_kind='kde')
 plt.suptitle('Pairplot of Variables')
 plt.show()
 
+# Identify outliers
+
+# Z-score method
+from scipy.stats import zscore
+z_scores = zscore(df)
+outliers = np.where((z_scores > 3) | (z_scores < -3))
+outliers
