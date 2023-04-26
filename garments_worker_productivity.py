@@ -1,4 +1,6 @@
 '''
+Ryo Fujimura
+
 Tasks: Clustering student behavior based on their test scores 
 Instructions/Directions: 
     Perform exploratory data analysis (EDA) using data visualization, for example, histogram of the features, boxplot, and apart from this you are encouraged to explore EDA and plot relevant graphs.   
